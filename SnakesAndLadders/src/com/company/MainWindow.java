@@ -9,7 +9,8 @@ public class MainWindow {
     private JTextField playername1;
     private JButton btnExit;
     private JLabel board;
-    private JButton button1;
+    private JButton nextTurnButton;
+    private JButton rollButton;
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
