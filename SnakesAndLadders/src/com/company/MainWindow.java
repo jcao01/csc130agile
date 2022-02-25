@@ -6,8 +6,11 @@ public class MainWindow {
     private JPanel panel1;
     private JLabel snlLogo;
     private JButton btnStart;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField playername1;
+    private JButton btnExit;
+    private JLabel board;
+    private JButton nextTurnButton;
+    private JButton rollButton;
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
