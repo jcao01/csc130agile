@@ -16,35 +16,13 @@ public String playerFour;
 
 
 private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-Players players = new Players();
+PlayersList players = new PlayersList();
 
 
 
 
     public void run() throws IOException {
-         int userChoice = -1;
-         do {
-             userChoice = gameMenu();
-
-             switch(userChoice) {
-                 case 1:
-                     players.onePlayer();
-                     break;
-
-                 case 2:
-                     players.twoPlayer();
-
-                     break;
-                 case 3:
-                     players.threePlayer();
-
-                     break;
-                 case 4:
-                     players.fourPlayer();
-                     break;
-
-             }
-         }while (userChoice < 0);
+        players.createPlayers();
     }
 
     public int gameMenu(){

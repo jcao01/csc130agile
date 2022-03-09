@@ -9,10 +9,10 @@ public class Game {
     private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 
-    String playerOne;
-    String playerTwo;
-    String playerThree;
-    String playerFour;
+    Player playerOne;
+    Player playerTwo;
+    Player playerThree;
+    Player playerFour;
     int playerOneScore;
     int playerTwoScore;
     int playerThreeScore;
@@ -20,7 +20,7 @@ public class Game {
 
     int playerCounter = 0;
 
-    public Game(String playerOne, String playerTwo, String playerThree, String playerFour) throws IOException{
+    public Game(Player playerOne, Player playerTwo, Player playerThree, Player playerFour) throws IOException{
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
         this.playerThree = playerThree;
@@ -54,65 +54,57 @@ public class Game {
     }
 
    public void playerOneTurn() throws IOException {
-       System.out.println(playerOne + " please press ENTER to roll for your turn");
-       reader.readLine();
+       System.out.println(playerOne.getName() + " please press ENTER to roll for your turn");
 
        int diceAmount = diceRoll();
 
        System.out.println(diceAmount);
 
-       this.playerOneScore = invisibleGameBoard(playerOneScore + diceAmount);
+       playerOne.setScore(invisibleGameBoard(playerOne.getScore() + diceAmount));
 
-       System.out.println("location: " + invisibleGameBoard(playerOneScore));
-
-     //  playerOneTurn();//this just re-runs playOne for testing... make sure to delete this aye
+       playerOne.setMessage(playerOne.getName() + " rolled " + diceAmount + " and landed in " + playerOne.getScore());
 
        playerTurn();
     }
 
     public void playerTwoTurn() throws IOException {
-        System.out.println(playerTwo + " please press ENTER to roll for your turn");
-        reader.readLine();
+        System.out.println(playerTwo.getName() + " please press ENTER to roll for your turn");
 
         int diceAmount = diceRoll();
 
         System.out.println(diceAmount);
 
-        this.playerTwoScore = invisibleGameBoard(playerTwoScore + diceAmount);
+        playerTwo.setScore(invisibleGameBoard(playerTwo.getScore() + diceAmount));
 
-        System.out.println("location: " + invisibleGameBoard(playerTwoScore));
+        playerTwo.setMessage(playerTwo.getName() + " rolled " + diceAmount + " and landed in " + playerTwo.getScore());
 
         playerTurn();
     }
 
     public void playerThreeTurn() throws IOException {
-        System.out.println(playerThree + " please press ENTER to roll for your turn");
-        reader.readLine();
+        System.out.println(playerThree.getName() + " please press ENTER to roll for your turn");
 
         int diceAmount = diceRoll();
 
         System.out.println(diceAmount);
 
-        this.playerThreeScore = invisibleGameBoard(playerThreeScore + diceAmount);
+        playerThree.setScore(invisibleGameBoard(playerThree.getScore() + diceAmount));
 
-
-
-        System.out.println("location: " + invisibleGameBoard(playerThreeScore));
+        playerThree.setMessage(playerThree.getName() + " rolled " + diceAmount + " and landed in " + playerThree.getScore());
 
         playerTurn();
     }
 
     public void playerFourTurn() throws IOException {
-        System.out.println(playerFour + " please press ENTER to roll for your turn");
-        reader.readLine();
+        System.out.println(playerFour.getName() + " please press ENTER to roll for your turn");
 
         int diceAmount = diceRoll();
 
         System.out.println(diceAmount);
 
-        this.playerFourScore = invisibleGameBoard(playerFourScore + diceAmount);
+        playerFour.setScore(invisibleGameBoard(playerFour.getScore() + diceAmount));
 
-        System.out.println("location: " + invisibleGameBoard(playerFourScore));
+        playerFour.setMessage(playerFour.getName() + " rolled " + diceAmount + " and landed in " + playerFour.getScore());
 
         playerCounter = 0;
         playerTurn();
@@ -132,112 +124,109 @@ public class Game {
 
     public int invisibleGameBoard(int playerScore){
 
-        int score = playerScore;
-
-
+        int score = playerScore - 1;
 
         int[] board = new int[100];
-        board[1] = 1;
-        board[2] = 38;
-        board[3] = 3;
-        board[4] = 14;
-        board[5] = 5;
-        board[6] = 6;
-        board[7] = 7;
-        board[8] = 8;
-        board[9] = 31;
-        board[10] = 10;
-        board[11] = 11;
-        board[12] = 12;
-        board[13] = 13;
-        board[14] = 14;
-        board[15] = 15;
-        board[16] = 16;
-        board[17] = 17;
-        board[18] = 18;
-        board[19] = 19;
-        board[20] = 20;
-        board[21] = 21;
-        board[22] = 22;
-        board[23] = 23;
-        board[24] = 24;
-        board[25] = 25;
-        board[26] = 26;
-        board[27] = 27;
-        board[28] = 28;
-        board[29] = 29;
-        board[30] = 30;
-        board[31] = 31;
-        board[32] = 32;
-        board[33] = 85;
-        board[34] = 34;
-        board[35] = 35;
-        board[36] = 36;
-        board[37] = 37;
-        board[38] = 38;
-        board[39] = 39;
-        board[40] = 40;
-        board[41] = 41;
-        board[42] = 42;
-        board[43] = 43;
-        board[44] = 44;
-        board[45] = 45;
-        board[46] = 46;
-        board[47] = 47;
-        board[48] = 48;
-        board[49] = 49;
-        board[50] = 50;
-        board[51] = 11;
-        board[52] = 88;
-        board[53] = 53;
-        board[54] = 54;
-        board[55] = 55;
-        board[56] = 15;
-        board[57] = 57;
-        board[58] = 58;
-        board[59] = 59;
-        board[60] = 60;
-        board[61] = 61;
-        board[62] = 57;
-        board[63] = 63;
-        board[64] = 64;
-        board[65] = 65;
-        board[66] = 66;
-        board[67] = 67;
-        board[68] = 68;
-        board[69] = 69;
-        board[70] = 70;
-        board[71] = 71;
-        board[72] = 72;
-        board[73] = 73;
-        board[74] = 74;
-        board[75] = 75;
-        board[76] = 76;
-        board[77] = 77;
-        board[78] = 78;
-        board[79] = 79;
-        board[80] = 98;
-        board[81] = 81;
-        board[82] = 82;
-        board[83] = 83;
-        board[84] = 84;
-        board[85] = 85;
-        board[86] = 86;
-        board[87] = 87;
-        board[88] = 88;
-        board[89] = 89;
-        board[90] = 90;
-        board[91] = 91;
-        board[92] = 92;
-        board[93] = 93;
-        board[94] = 94;
-        board[95] = 95;
-        board[96] = 96;
-        board[97] = 97;
-        board[98] = 98;
-        board[99] = 8;
-
-
+        board[0] = 1;
+        board[1] = 38;
+        board[2] = 3;
+        board[3] = 14;
+        board[4] = 5;
+        board[5] = 6;
+        board[6] = 7;
+        board[7] = 8;
+        board[8] = 31;
+        board[9] = 10;
+        board[10] = 11;
+        board[11] = 12;
+        board[12] = 13;
+        board[13] = 14;
+        board[14] = 15;
+        board[15] = 16;
+        board[16] = 17;
+        board[17] = 18;
+        board[18] = 19;
+        board[29] = 20;
+        board[20] = 21;
+        board[21] = 22;
+        board[22] = 23;
+        board[23] = 24;
+        board[24] = 25;
+        board[25] = 26;
+        board[26] = 27;
+        board[27] = 28;
+        board[28] = 29;
+        board[29] = 30;
+        board[30] = 31;
+        board[31] = 32;
+        board[32] = 85;
+        board[33] = 34;
+        board[34] = 35;
+        board[35] = 36;
+        board[36] = 37;
+        board[37] = 38;
+        board[38] = 39;
+        board[39] = 40;
+        board[40] = 41;
+        board[41] = 42;
+        board[42] = 43;
+        board[43] = 44;
+        board[44] = 45;
+        board[45] = 46;
+        board[46] = 47;
+        board[47] = 48;
+        board[48] = 49;
+        board[49] = 50;
+        board[50] = 11;
+        board[51] = 88;
+        board[52] = 53;
+        board[53] = 54;
+        board[54] = 55;
+        board[55] = 15;
+        board[56] = 57;
+        board[57] = 58;
+        board[58] = 59;
+        board[59] = 60;
+        board[60] = 61;
+        board[61] = 57;
+        board[62] = 63;
+        board[63] = 64;
+        board[64] = 65;
+        board[65] = 66;
+        board[66] = 67;
+        board[67] = 68;
+        board[68] = 69;
+        board[69] = 70;
+        board[70] = 71;
+        board[71] = 72;
+        board[72] = 73;
+        board[73] = 74;
+        board[74] = 75;
+        board[75] = 76;
+        board[76] = 77;
+        board[77] = 78;
+        board[78] = 79;
+        board[79] = 99;
+        board[80] = 81;
+        board[81] = 82;
+        board[82] = 83;
+        board[83] = 84;
+        board[84] = 85;
+        board[85] = 86;
+        board[86] = 87;
+        board[87] = 88;
+        board[88] = 89;
+        board[89] = 90;
+        board[90] = 91;
+        board[91] = 53;
+        board[92] = 93;
+        board[93] = 94;
+        board[94] = 95;
+        board[95] = 96;
+        board[96] = 97;
+        board[97] = 8;
+        board[98] = 99;
+        board[99] = 100;
 
         return board[score];
 
