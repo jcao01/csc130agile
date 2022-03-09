@@ -4,7 +4,6 @@ import javax.swing.*;
 
 public class MainWindow {
     private JPanel panel1;
-    private JLabel snlLogo;
     private JButton btnStart;
     private JTextField playername1;
     private JButton btnExit;
