@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d7d729b-5482-42c5-90bc-5e494a7e3c4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/SnakesAndLadders.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/SnakesAndLadders.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Player.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Players.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/gameplay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/pauseMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MainWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Players.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/PlayersList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/gameplay.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/gameplay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/pauseMenu.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/pauseMenu.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646777356901</updated>
-      <workItem from="1646777358311" duration="14680000" />
+      <workItem from="1646777358311" duration="14740000" />
     </task>
     <servers />
   </component>

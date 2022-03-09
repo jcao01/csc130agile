@@ -13,10 +13,6 @@ public class Game {
     Player playerTwo;
     Player playerThree;
     Player playerFour;
-    int playerOneScore;
-    int playerTwoScore;
-    int playerThreeScore;
-    int playerFourScore;
 
     int playerCounter = 0;
 
