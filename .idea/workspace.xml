@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36c060bf-6656-4c40-80cd-fdadc0e4e379" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/SnakesAndLadders.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/SnakesAndLadders.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SnakesAndLadders/SnakesAndLadders.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SnakesAndLadders/src/com/company/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/SnakesAndLadders/src/com/company/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SnakesAndLadders/src/com/company/gameplay.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SnakesAndLadders/src/com/company/gameplay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SnakesAndLadders/src/com/company/pauseMenu.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SnakesAndLadders/src/com/company/pauseMenu.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="267Y8h3eZBOB4k9wda6Bj0ROMOp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="318" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TypesOfSuperheros" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36c060bf-6656-4c40-80cd-fdadc0e4e379" name="Changes" comment="" />
+      <created>1646775935110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646775935110</updated>
+      <workItem from="1646775936816" duration="689000" />
+      <workItem from="1646776655671" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
