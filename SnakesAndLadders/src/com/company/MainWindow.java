@@ -14,6 +14,13 @@ public class MainWindow extends JFrame{
     private JLabel board;
     private JButton nextTurnButton;
     private JButton rollButton;
+    private JLabel gameStatus;
+    private JLabel playerOneScore;
+    private JLabel playerTwoScore;
+    private JLabel playerThreeScore;
+    private JLabel playerFourScore;
+
+    Controller con = new Controller();
 
     public MainWindow(){
         setContentPane(panel1);
@@ -23,12 +30,7 @@ public class MainWindow extends JFrame{
         btnStart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                Controller con = new Controller();
-                try {
-                    con.run();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
+                con.startGame();
             }
         });
         btnExit.addActionListener(new ActionListener() {
@@ -37,6 +39,38 @@ public class MainWindow extends JFrame{
                 System.out.println("close");
                 setVisible(false);
                 dispose();
+            }
+        });
+
+        rollButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    con.play();
+                    gameStatus.setText(con.getMessage());
+                    switch(con.getTurn()) {
+                        case 1:
+                            playerOneScore.setText(con.getScore());
+                            break;
+                        case 2:
+                            playerTwoScore.setText(con.getScore());
+                            break;
+                        case 3:
+                            playerThreeScore.setText(con.getScore());
+                            break;
+                        case 4:
+                            playerFourScore.setText(con.getScore());
+                            break;
+                    }
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        nextTurnButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                con.nextPlayer();
             }
         });
     }

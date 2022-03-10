@@ -6,6 +6,7 @@ public class Player {
     private int score;
     private String message;
 
+
     public Player(String name) {
         setName(name);
     }

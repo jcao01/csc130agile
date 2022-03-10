@@ -13,101 +13,201 @@ public class Game {
     Player playerTwo;
     Player playerThree;
     Player playerFour;
+    Player winner;
 
-    int playerCounter = 0;
+    int playerCounter = 1;
 
-    public Game(Player playerOne, Player playerTwo, Player playerThree, Player playerFour) throws IOException{
+    boolean playerRolled = false;
+
+    public Game(Player playerOne, Player playerTwo, Player playerThree, Player playerFour) {
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
         this.playerThree = playerThree;
         this.playerFour = playerFour;
-
-        playGame();
     }
 
-    public void testing(){
-        System.out.println(playerOne + " " + playerTwo + " " + playerThree + " " + playerFour);
+    public int getPlayerCounter() {
+        return playerCounter;
     }
 
     public void playGame() throws IOException{
         playerTurn();
     }
 
-    public void playerTurn() throws IOException{
-        playerCounter++;
+    public void incrementCounter() {
+        playerRolled = false;
+        switch(playerCounter) {
+            case 1:
+                playerCounter = 2;
+                break;
+            case 2:
+                playerCounter = 3;
+                break;
+            case 3:
+                playerCounter = 4;
+                break;
+            case 4:
+                playerCounter = 1;
+                break;
+            default:
+                System.out.println("error occurred when incrementing counter");
+                playerRolled = true;
+                break;
+        }
+    }
+
+    private void playerTurn() throws IOException{
         if(playerCounter == 1){
             playerOneTurn();
+            playerRolled = true;
         }
         else if(playerCounter == 2){
             playerTwoTurn();
+            playerRolled = true;
         }
         else if(playerCounter == 3){
             playerThreeTurn();
+            playerRolled = true;
         }
         else{
             playerFourTurn();
+            playerRolled = true;
         }
     }
 
-   public void playerOneTurn() throws IOException {
-       System.out.println(playerOne.getName() + " please press ENTER to roll for your turn");
+   private void playerOneTurn() throws IOException {
+        if (playerRolled) {
+            playerOne.setMessage("Cheater!");
+        } else {
+            System.out.println(playerOne.getName() + " please press ENTER to roll for your turn");
 
-       int diceAmount = diceRoll();
+            int diceAmount = diceRoll();
 
-       System.out.println(diceAmount);
+            System.out.println(diceAmount);
 
-       playerOne.setScore(invisibleGameBoard(playerOne.getScore() + diceAmount));
+            int spotLanded = invisibleGameBoard(playerOne.getScore() + diceAmount);
+            System.out.println(spotLanded);
 
-       playerOne.setMessage(playerOne.getName() + " rolled " + diceAmount + " and landed in " + playerOne.getScore());
+            playerOne.setScore(spotLanded);
 
-       playerTurn();
+            playerOne.setMessage(playerOne.getName() + " rolled " + diceAmount + " and landed in " + playerOne.getScore());
+        }
+
     }
 
-    public void playerTwoTurn() throws IOException {
-        System.out.println(playerTwo.getName() + " please press ENTER to roll for your turn");
+    private void playerTwoTurn() throws IOException {
+        if (playerRolled) {
+            playerTwo.setMessage("Cheater!");
+        } else {
+            System.out.println(playerTwo.getName() + " please press ENTER to roll for your turn");
 
-        int diceAmount = diceRoll();
+            int diceAmount = diceRoll();
 
-        System.out.println(diceAmount);
+            System.out.println(diceAmount);
 
-        playerTwo.setScore(invisibleGameBoard(playerTwo.getScore() + diceAmount));
+            int spotLanded = invisibleGameBoard(playerTwo.getScore() + diceAmount);
+            System.out.println(spotLanded);
 
-        playerTwo.setMessage(playerTwo.getName() + " rolled " + diceAmount + " and landed in " + playerTwo.getScore());
+            playerTwo.setScore(spotLanded);
 
-        playerTurn();
+            playerTwo.setMessage(playerTwo.getName() + " rolled " + diceAmount + " and landed in " + playerTwo.getScore());
+        }
+
     }
 
-    public void playerThreeTurn() throws IOException {
-        System.out.println(playerThree.getName() + " please press ENTER to roll for your turn");
+    private void playerThreeTurn() throws IOException {
+        if (playerRolled) {
+            playerOne.setMessage("Cheater!");
+        } else {
+            System.out.println(playerThree.getName() + " please press ENTER to roll for your turn");
 
-        int diceAmount = diceRoll();
+            int diceAmount = diceRoll();
 
-        System.out.println(diceAmount);
+            System.out.println(diceAmount);
 
-        playerThree.setScore(invisibleGameBoard(playerThree.getScore() + diceAmount));
+            int spotLanded = invisibleGameBoard(playerThree.getScore() + diceAmount);
+            System.out.println(spotLanded);
 
-        playerThree.setMessage(playerThree.getName() + " rolled " + diceAmount + " and landed in " + playerThree.getScore());
+            playerThree.setScore(spotLanded);
 
-        playerTurn();
+            playerThree.setMessage(playerThree.getName() + " rolled " + diceAmount + " and landed in " + playerThree.getScore());
+        }
+
     }
 
-    public void playerFourTurn() throws IOException {
-        System.out.println(playerFour.getName() + " please press ENTER to roll for your turn");
+    private void playerFourTurn() throws IOException {
+        if (playerRolled) {
+            playerFour.setMessage("Cheater!");
+        } else {
+            System.out.println(playerFour.getName() + " please press ENTER to roll for your turn");
 
-        int diceAmount = diceRoll();
+            int diceAmount = diceRoll();
 
-        System.out.println(diceAmount);
+            System.out.println(diceAmount);
 
-        playerFour.setScore(invisibleGameBoard(playerFour.getScore() + diceAmount));
 
-        playerFour.setMessage(playerFour.getName() + " rolled " + diceAmount + " and landed in " + playerFour.getScore());
+            int spotLanded = invisibleGameBoard(playerFour.getScore() + diceAmount);
+            System.out.println(spotLanded);
 
-        playerCounter = 0;
-        playerTurn();
+            playerFour.setScore(spotLanded);
+
+            playerFour.setMessage(playerFour.getName() + " rolled " + diceAmount + " and landed in " + playerFour.getScore());
+        }
     }
 
+    public String getPlayerMessage() {
+        String message = "";
 
-    public int diceRoll(){
+        switch(playerCounter) {
+            case 1:
+                message = playerOne.getMessage();
+                break;
+            case 2:
+                message = playerTwo.getMessage();
+                break;
+            case 3:
+                message = playerThree.getMessage();
+                break;
+            case 4:
+                message = playerFour.getMessage();
+                break;
+            default:
+                System.out.println("error occurred when retrieving message");
+                message = "error";
+                break;
+        }
+        return message;
+    }
+
+    public String getPlayerSpot() {
+        int spot = 0;
+        String message = "";
+        switch(playerCounter) {
+            case 1:
+                spot = playerOne.getScore();
+                message = playerOne.getName() + ": " + spot;
+                break;
+            case 2:
+                spot = playerTwo.getScore();
+                message = playerTwo.getName() + ": " + spot;
+                break;
+            case 3:
+                spot = playerThree.getScore();
+                message = playerThree.getName() + ": " + spot;
+                break;
+            case 4:
+                spot = playerFour.getScore();
+                message = playerFour.getName() + ": " + spot;
+                break;
+            default:
+                System.out.println("error occurred when retrieving message");
+                message = "error";
+                break;
+        }
+        return message;
+    }
+
+    private int diceRoll(){
         Random random = new Random();
         int min = 1;
         int max = 7;
@@ -118,7 +218,7 @@ public class Game {
         return rand1 + rand2;
     }
 
-    public int invisibleGameBoard(int playerScore){
+    private int invisibleGameBoard(int playerScore){
 
         int score = playerScore - 1;
 
@@ -142,7 +242,7 @@ public class Game {
         board[16] = 17;
         board[17] = 18;
         board[18] = 19;
-        board[29] = 20;
+        board[19] = 20;
         board[20] = 21;
         board[21] = 22;
         board[22] = 23;

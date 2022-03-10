@@ -85,54 +85,54 @@
               <text value="Next Turn"/>
             </properties>
           </component>
-          <component id="a6794" class="javax.swing.JLabel">
+          <component id="a6794" class="javax.swing.JLabel" binding="playerOneScore">
             <constraints>
               <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="JetBrains Mono" size="20" style="3"/>
               <foreground color="-16777216"/>
-              <text value="{PLAYERNAMES}'S SCORE:    "/>
+              <text value=""/>
             </properties>
           </component>
-          <component id="cf510" class="javax.swing.JLabel">
+          <component id="cf510" class="javax.swing.JLabel" binding="gameStatus">
             <constraints>
               <grid row="8" column="0" row-span="3" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="JetBrains Mono" size="36" style="1"/>
               <foreground color="-16777216"/>
-              <text value="{PLAYER} ROLLED A {NUMBER}"/>
+              <text value=""/>
             </properties>
           </component>
-          <component id="8725f" class="javax.swing.JLabel">
+          <component id="8725f" class="javax.swing.JLabel" binding="playerTwoScore">
             <constraints>
               <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="JetBrains Mono" size="20" style="3"/>
               <foreground color="-16777216"/>
-              <text value="ALEX'S SCORE:     "/>
+              <text value=""/>
             </properties>
           </component>
-          <component id="c38b0" class="javax.swing.JLabel">
+          <component id="c38b0" class="javax.swing.JLabel" binding="playerThreeScore">
             <constraints>
               <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="JetBrains Mono" size="20" style="3"/>
               <foreground color="-16777216"/>
-              <text value="TAYLOR'S SCORE:    "/>
+              <text value=""/>
             </properties>
           </component>
-          <component id="8922e" class="javax.swing.JLabel">
+          <component id="8922e" class="javax.swing.JLabel" binding="playerFourScore">
             <constraints>
               <grid row="6" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="JetBrains Mono" size="20" style="3"/>
               <foreground color="-16777216"/>
-              <text value="STEVEN'S SCORE:    "/>
+              <text value=""/>
             </properties>
           </component>
           <component id="d85f6" class="javax.swing.JButton" binding="rollButton" default-binding="true">
