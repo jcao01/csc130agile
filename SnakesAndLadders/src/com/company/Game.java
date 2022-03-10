@@ -9,15 +9,15 @@ public class Game {
     private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 
-    Player playerOne;
-    Player playerTwo;
-    Player playerThree;
-    Player playerFour;
-    Player winner;
+    private Player playerOne;
+    private Player playerTwo;
+    private Player playerThree;
+    private Player playerFour;
 
-    int playerCounter = 1;
+    private int playerCounter = 1;
 
-    boolean playerRolled = false;
+    private boolean playerRolled = false;
+    private boolean gameEnd = false;
 
     public Game(Player playerOne, Player playerTwo, Player playerThree, Player playerFour) {
         this.playerOne = playerOne;
@@ -35,43 +35,43 @@ public class Game {
     }
 
     public void incrementCounter() {
-        playerRolled = false;
-        switch(playerCounter) {
-            case 1:
-                playerCounter = 2;
-                break;
-            case 2:
-                playerCounter = 3;
-                break;
-            case 3:
-                playerCounter = 4;
-                break;
-            case 4:
-                playerCounter = 1;
-                break;
-            default:
-                System.out.println("error occurred when incrementing counter");
-                playerRolled = true;
-                break;
+        if (!gameEnd) {
+            playerRolled = false;
+            switch (playerCounter) {
+                case 1:
+                    playerCounter = 2;
+                    break;
+                case 2:
+                    playerCounter = 3;
+                    break;
+                case 3:
+                    playerCounter = 4;
+                    break;
+                case 4:
+                    playerCounter = 1;
+                    break;
+                default:
+                    System.out.println("error occurred when incrementing counter");
+                    break;
+            }
         }
     }
 
     private void playerTurn() throws IOException{
-        if(playerCounter == 1){
-            playerOneTurn();
-            playerRolled = true;
-        }
-        else if(playerCounter == 2){
-            playerTwoTurn();
-            playerRolled = true;
-        }
-        else if(playerCounter == 3){
-            playerThreeTurn();
-            playerRolled = true;
-        }
-        else{
-            playerFourTurn();
-            playerRolled = true;
+        if (!gameEnd) {
+            if (playerCounter == 1) {
+                playerOneTurn();
+                playerRolled = true;
+            } else if (playerCounter == 2) {
+                playerTwoTurn();
+                playerRolled = true;
+            } else if (playerCounter == 3) {
+                playerThreeTurn();
+                playerRolled = true;
+            } else {
+                playerFourTurn();
+                playerRolled = true;
+            }
         }
     }
 
@@ -84,13 +84,22 @@ public class Game {
             int diceAmount = diceRoll();
 
             System.out.println(diceAmount);
-
-            int spotLanded = invisibleGameBoard(playerOne.getScore() + diceAmount);
+            int total = playerOne.getScore() + diceAmount;
+            if (total >= 100) {
+                total = 100;
+            }
+            total--;
+            int spotLanded = invisibleGameBoard(total);
             System.out.println(spotLanded);
 
             playerOne.setScore(spotLanded);
 
-            playerOne.setMessage(playerOne.getName() + " rolled " + diceAmount + " and landed in " + playerOne.getScore());
+            if (spotLanded == 100) {
+                gameEnd = true;
+                playerOne.setMessage(playerOne.getName() + " wins");
+            } else {
+                playerOne.setMessage(playerOne.getName() + " rolled " + diceAmount + " and landed in " + playerOne.getScore());
+            }
         }
 
     }
@@ -104,13 +113,22 @@ public class Game {
             int diceAmount = diceRoll();
 
             System.out.println(diceAmount);
-
-            int spotLanded = invisibleGameBoard(playerTwo.getScore() + diceAmount);
+            int total = playerTwo.getScore() + diceAmount;
+            if (total >= 100) {
+                total = 100;
+            }
+            total--;
+            int spotLanded = invisibleGameBoard(total);
             System.out.println(spotLanded);
 
             playerTwo.setScore(spotLanded);
 
-            playerTwo.setMessage(playerTwo.getName() + " rolled " + diceAmount + " and landed in " + playerTwo.getScore());
+            if (spotLanded == 100) {
+                gameEnd = true;
+                playerTwo.setMessage(playerTwo.getName() + " wins");
+            } else {
+                playerTwo.setMessage(playerTwo.getName() + " rolled " + diceAmount + " and landed in " + playerTwo.getScore());
+            }
         }
 
     }
@@ -124,13 +142,21 @@ public class Game {
             int diceAmount = diceRoll();
 
             System.out.println(diceAmount);
-
-            int spotLanded = invisibleGameBoard(playerThree.getScore() + diceAmount);
+            int total = playerThree.getScore() + diceAmount;
+            if (total >= 100) {
+                total = 100;
+            }
+            total--;
+            int spotLanded = invisibleGameBoard(total);
             System.out.println(spotLanded);
 
             playerThree.setScore(spotLanded);
-
-            playerThree.setMessage(playerThree.getName() + " rolled " + diceAmount + " and landed in " + playerThree.getScore());
+            if (spotLanded == 100) {
+                gameEnd = true;
+                playerThree.setMessage(playerThree.getName() + " wins");
+            } else {
+                playerThree.setMessage(playerThree.getName() + " rolled " + diceAmount + " and landed in " + playerThree.getScore());
+            }
         }
 
     }
@@ -144,14 +170,22 @@ public class Game {
             int diceAmount = diceRoll();
 
             System.out.println(diceAmount);
-
-
-            int spotLanded = invisibleGameBoard(playerFour.getScore() + diceAmount);
+            int total = playerFour.getScore() + diceAmount;
+            if (total >= 100) {
+                total = 100;
+            }
+            total--;
+            int spotLanded = invisibleGameBoard(total);
             System.out.println(spotLanded);
 
             playerFour.setScore(spotLanded);
 
-            playerFour.setMessage(playerFour.getName() + " rolled " + diceAmount + " and landed in " + playerFour.getScore());
+            if (spotLanded == 100) {
+                gameEnd = true;
+                playerOne.setMessage(playerOne.getName() + " wins");
+            } else {
+                playerFour.setMessage(playerFour.getName() + " rolled " + diceAmount + " and landed in " + playerFour.getScore());
+            }
         }
     }
 
@@ -220,7 +254,7 @@ public class Game {
 
     private int invisibleGameBoard(int playerScore){
 
-        int score = playerScore - 1;
+        int score = playerScore;
 
         int[] board = new int[100];
         board[0] = 1;

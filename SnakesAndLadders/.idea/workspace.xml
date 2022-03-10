@@ -5,18 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/GameWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/MainWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SnakesAndLadders/com/company/PlayersList.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MainWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

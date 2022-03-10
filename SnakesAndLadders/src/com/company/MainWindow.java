@@ -71,6 +71,7 @@ public class MainWindow extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 con.nextPlayer();
+                gameStatus.setText("Next turn");
             }
         });
     }

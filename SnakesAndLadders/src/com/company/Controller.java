@@ -4,15 +4,6 @@ import java.io.IOException;
 
 public class Controller {
 
-
-    public int[] boardPlace = new int[50];
-    public String playerOne;
-    public String playerTwo;
-    public String playerThree;
-    public String playerFour;
-
-    PlayersList players = new PlayersList();
-
     Player firstPlayer = new Player("Ron");
     Player secondPlayer = new Player("Alex");
     Player thirdPlayer = new Player("Taylor");
